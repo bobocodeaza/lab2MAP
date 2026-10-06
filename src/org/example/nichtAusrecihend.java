@@ -1,23 +1,25 @@
 package org.example;
+import java.util.Arrays;
 
 public class nichtAusrecihend {
     private int[] note;
 
-    public nichtAusrecihend(int[] note){
+    public nichtAusrecihend(int[] note) {
         this.note = note;
     }
 
-    int[] ausreichendeNoten = new int[100];
-    int index=0;
-
     public int[] picat() {
-        for (int i : note){
-            if (i<40){
-                ausreichendeNoten[index]=i;
+        int[] ausreichendeNoten = new int[note.length];
+        int index = 0;
+
+        for (int i : note) {
+            if (i < 40) {
+                ausreichendeNoten[index] = i;
                 index++;
             }
         }
-        return ausreichendeNoten;
-    }
 
+        return Arrays.copyOf(ausreichendeNoten, index);
+
+    }
 }
