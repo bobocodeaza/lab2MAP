@@ -1,10 +1,10 @@
 package org.example;
 import java.util.Arrays;
 
-public class nichtAusrecihend {
+public class nichtAusreichend {
     private int[] note;
 
-    public nichtAusrecihend(int[] note) {
+    public nichtAusreichend(int[] note) {
         this.note = note;
     }
 
@@ -13,7 +13,7 @@ public class nichtAusrecihend {
         int index = 0;
 
         for (int i : note) {
-            if (i < 40) {
+            if (i > 40) {
                 ausreichendeNoten[index] = i;
                 index++;
             }
